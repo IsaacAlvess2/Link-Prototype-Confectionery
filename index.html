@@ -4,105 +4,142 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Lulu Doces</title>
-
-<link rel="icon" href="logo.png" type="image/png" />
+<link rel="icon" href="logo2.png" type="image/png" />
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+
+<header>
+    <img src="logo2.png" alt="Logo Lulu Doces" class="logo">
+</header>
+
+
+<section class="foto-texto">
+    <img src="fotopage1.jpeg" alt="Bolo" class="foto">
+    <div class="texto">
+        <h1>“Por uma vida mais doce. Há mais de 5 anos transformando cada bolo e doce em momentos inesquecíveis.”</h1>
+    </div>
+</section>
+
+
+<section class="botoes">
+    <h2>Acesse Nosso Cardápio</h2>
+    <a href="pagcardapio.html" target="_blank">
+        <button class="cardapio">Clique aqui</button>
+    </a>
+</section>
+
+
+<section class="botoes">
+    <h2>Dúvidas ou encomendas pelo WhatsApp:</h2>
+    <a href="https://wa.me/5581984162280" target="_blank">
+        <button class="whatsapp">Whatsapp</button>
+    </a>
+</section>
+
+
 
 <style>
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #fed2d9;
-
-    
+    background: #fdf4ed;
+    color: #333;
 }
 
+
 header {
-    background: #fed2d9;
-    color: #aa6b69;
+    background: #fdf4ed;
     text-align: center;
     padding: 30px;
 }
 
-header h1 {
-    font-family: initial;
-    font-weight: 700;
-    
+header .logo {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
 }
 
-section {
+
+.foto-texto {
+    display: flex;
+    flex-wrap: wrap;               
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
     padding: 40px;
+    text-align: left;
+}
+
+.foto-texto img.foto {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.foto-texto .texto h1 {
+    font-family:'Lato', sans-serif;
+    color: #aa6b69;
+    font-size: 24px;
+    margin: 0;
+}
+
+
+.botoes {
     text-align: center;
+    padding: 30px;
+}
+
+.botoes h2 {
+    font-family:'Lato', sans-serif;
+    color: #aa6b69;
+    font-size: 22px;
+    margin-bottom: 20px;
 }
 
 button {
-    background: #0a7cff;
-    color: white;
+    font-family: 'Lato', sans-serif;
     border: none;
     padding: 15px 25px;
     font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-button:hover {
+button.cardapio {
+    background: #0a7cff;
+    color: #fff;
+}
+
+button.cardapio:hover {
     background: #0663cc;
 }
 
-h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #aa6b69;
-    font-size: 15px;
+button.whatsapp {
+    background: #25D366;
+    color: #fff;
 }
 
-.cardapio {
-    color: #fffffe;
-    background-color: #0a7cff;
-}
-
-.whatsapp {
-    color: #fffffe;
-    background-color: #25D366;
-    text-decoration: none;
-    display: inline-block;
-    border: none;
-    padding: 15px 25px;
-    border-radius: 8px;
-   
-}
-
-.whatsapp:hover {
+button.whatsapp:hover {
     background-color: #1ebe5d;
 }
 
+
+@media (max-width: 800px) {
+    .foto-texto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto-texto .texto h1 {
+        font-size: 20px;
+    }
+}
 </style>
-
-</head>
-
-<body>
-
-
-
-<header>
-    <h1>LULU DOCES</h1>
-    <p>____________________________</p>
-</header>
-
-
-<section>
-   <h2>Acesse Nosso Cardápio</h2>
-   <a href="https://www.canva.com/design/DAGB8eKHDU4/feUs5zurb2LJw_l3uqfaUg/edit?utm_content=DAGB8eKHDU4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">
-       <button class="cardapio">Clique aqui</button>
-   </a>
-</section>
-
-<section>
-    <h2>Fale Conosco</h2>
-    <a href="https://wa.me/5581984162280" target="_blank">
-        <button class="whatsapp">Whatsapp</button>
-    </a>
-</section>
 
 </body>
 </html>
