@@ -1,0 +1,234 @@
+/* =============================================
+   LULU DOCES — pagcardapio.css
+   Galeria do cardápio — refinada e elegante
+============================================= */
+
+:root {
+  --creme:     #fdf4ed;
+  --rose:      #aa6b69;
+  --rose-dark: #8a5250;
+  --rose-pale: #f0d8d5;
+  --dark:      #3b2325;
+  --text:      #5a3d3b;
+  --white:     #ffffff;
+  --radius:    16px;
+  --transition: 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  background-color: var(--creme);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@300;400;500&family=Playfair+Display:ital@1&display=swap');
+
+/* ── HEADER ───────────────────────────────── */
+header {
+  background: var(--dark);
+  color: var(--white);
+  padding: 0 5vw;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  gap: 20px;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: var(--white);
+}
+
+h1 em {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--rose-pale);
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  padding: 8px 16px 8px 12px;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.back-button:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.4);
+  transform: translateX(-2px);
+}
+
+.back-button svg {
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+
+.back-button:hover svg {
+  transform: translateX(-2px);
+}
+
+@media (max-width: 480px) {
+  .back-button span { display: none; }
+  .back-button { padding: 8px 10px; }
+}
+
+/* ── INTRO ────────────────────────────────── */
+.gallery-intro {
+  text-align: center;
+  padding: 64px 5vw 32px;
+}
+
+.gallery-intro .label {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rose);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.gallery-intro h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 300;
+  color: var(--dark);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.gallery-intro p {
+  max-width: 480px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+/* ── GALERIA ──────────────────────────────── */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 40px 5vw 80px;
+}
+
+.photo {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(59,35,37,0.06);
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+  animation: fadeUp 0.6s ease both;
+}
+
+/* Stagger nas fotos */
+.photo:nth-child(1)  { animation-delay: 0.05s; }
+.photo:nth-child(2)  { animation-delay: 0.10s; }
+.photo:nth-child(3)  { animation-delay: 0.15s; }
+.photo:nth-child(4)  { animation-delay: 0.20s; }
+.photo:nth-child(5)  { animation-delay: 0.25s; }
+.photo:nth-child(6)  { animation-delay: 0.30s; }
+.photo:nth-child(7)  { animation-delay: 0.35s; }
+.photo:nth-child(8)  { animation-delay: 0.40s; }
+
+.photo img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.photo:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(59,35,37,0.14);
+}
+
+.photo:hover img {
+  transform: scale(1.04);
+}
+
+/* Caption opcional (dentro de .photo, após a img) */
+.photo-caption {
+  padding: 12px 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: var(--dark);
+}
+
+/* ── CTA FOOTER ───────────────────────────── */
+.gallery-cta {
+  background: var(--dark);
+  text-align: center;
+  padding: 64px 5vw;
+}
+
+.gallery-cta p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.gallery-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.gallery-cta a:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(37,211,102,0.3);
+}
+
+/* ── ANIMAÇÃO ─────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── RESPONSIVO ───────────────────────────── */
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 24px 4vw 60px;
+  }
+
+  .photo img { height: 160px; }
+}

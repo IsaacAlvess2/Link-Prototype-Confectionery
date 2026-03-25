@@ -5,141 +5,125 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Lulu Doces</title>
 <link rel="icon" href="logo2.png" type="image/png" />
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
-
-<header>
+<!-- HERO -->
+<header class="hero">
+  <nav class="navbar">
     <img src="logo2.png" alt="Logo Lulu Doces" class="logo">
+    <div class="nav-links">
+      <a href="pagcardapio.html" target="_blank">Cardápio</a>
+      <a href="https://wa.me/5581984162280" target="_blank" class="nav-cta">Encomendar</a>
+    </div>
+  </nav>
+
+  <div class="hero-body">
+    <div class="hero-text">
+      <span class="label">✦ Confeitaria Artesanal</span>
+      <h1>Feito com<br><em>carinho</em> &<br>dedicação.</h1>
+      <p>Há mais de 5 anos transformando bolos e doces em momentos inesquecíveis. Cada receita preparada com ingredientes de qualidade e aquele toque especial.</p>
+      <div class="hero-actions">
+        <a href="pagcardapio.html" target="_blank" class="btn btn-primary">Ver Cardápio</a>
+        <a href="https://wa.me/5581984162280" target="_blank" class="btn btn-ghost">WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <div class="hero-img-frame">
+        <img src="fotopage1.jpeg" alt="Bolo artesanal Lulu Doces" class="hero-img">
+        <div class="hero-badge">
+          <span class="badge-num">5+</span>
+          <span class="badge-txt">anos de<br>experiência</span>
+        </div>
+      </div>
+      <div class="hero-deco-circle"></div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
 </header>
 
 
-<section class="foto-texto">
-    <img src="fotopage1.jpeg" alt="Bolo" class="foto">
-    <div class="texto">
-        <h1>“Por uma vida mais doce. Há mais de 5 anos transformando cada bolo e doce em momentos inesquecíveis.”</h1>
+<section class="pillars">
+  <div class="pillar">
+    <div class="pillar-icon">🎂</div>
+    <h3>Bolos Personalizados</h3>
+    <p>Criados sob medida para cada celebração.</p>
+  </div>
+  <div class="pillar">
+    <div class="pillar-icon">🍬</div>
+    <h3>Doces Finos e Personalizados</h3>
+    <p>Brigadeiros, trufas e muito mais feitos na hora.</p>
+  </div>
+  <div class="pillar">
+    <div class="pillar-icon">🌿</div>
+    <h3>Ingredientes Selecionados</h3>
+    <p>Qualidade em cada etapa do preparo.</p>
+  </div>
+  <div class="pillar">
+    <div class="pillar-icon">💌</div>
+    <h3>Entrega com Cuidado</h3>
+    <p>Seu pedido chega perfeito, sempre.</p>
+  </div>
+</section>
+
+<!-- DESTAQUE CARDÁPIO -->
+<section class="cardapio-section">
+  <div class="cardapio-text">
+    <span class="label">✦ Nosso Cardápio</span>
+    <h2>Onde cada sabor conta uma história <em>Encante-se a cada mordida</em>.</h2>
+    <p>Do clássico ao especial, temos a opção perfeita para seu evento, aniversário ou presente.</p>
+    <a href="pagcardapio.html" target="_blank" class="btn btn-primary">Explorar Cardápio</a>
+  </div>
+  <div class="cardapio-mosaic">
+    <div class="mosaic-card tall">
+      <img src="bolos.jpeg" class="mosaic-img" alt="Bolos">
+      <div class="mosaic-overlay">
+        <span>Bolos</span>
+      </div>
     </div>
+    <div class="mosaic-card">
+      <img src="docesfinos.jpeg" class="mosaic-img" alt="Doces Finos">
+      <div class="mosaic-overlay">
+        <span>Doces Finos</span>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <img src="Encomendas.jpeg" class="mosaic-img" alt="Encomendas">
+      <div class="mosaic-overlay">
+      </div>
+    </div>
+  </div>
 </section>
 
 
-<section class="botoes">
-    <h2>Acesse Nosso Cardápio</h2>
-    <a href="pagcardapio.html" target="_blank">
-        <button class="cardapio">Clique aqui</button>
+<section class="wpp-section">
+  <div class="wpp-inner">
+    <div class="wpp-deco">✦</div>
+    <h2>Pronto para encomendar?</h2>
+    <p>Fale com a gente pelo WhatsApp e tire todas as suas dúvidas. Atendemos com muito carinho!</p>
+    <a href="https://wa.me/5581984162280" target="_blank" class="btn btn-wpp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Falar no WhatsApp
     </a>
+  </div>
 </section>
 
-
-<section class="botoes">
-    <h2>Dúvidas ou encomendas pelo WhatsApp:</h2>
-    <a href="https://wa.me/5581984162280" target="_blank">
-        <button class="whatsapp">Whatsapp</button>
-    </a>
-</section>
-
-
-
-<style>
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #fdf4ed;
-    color: #333;
-}
-
-
-header {
-    background: #fdf4ed;
-    text-align: center;
-    padding: 30px;
-}
-
-header .logo {
-    width: 300px;
-    height: auto;
-    border-radius: 15px;
-}
-
-
-.foto-texto {
-    display: flex;
-    flex-wrap: wrap;               
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 40px;
-    text-align: left;
-}
-
-.foto-texto img.foto {
-    width: 420px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-}
-
-.foto-texto .texto h1 {
-    font-family:'Lato', sans-serif;
-    color: #aa6b69;
-    font-size: 24px;
-    margin: 0;
-}
-
-
-.botoes {
-    text-align: center;
-    padding: 30px;
-}
-
-.botoes h2 {
-    font-family:'Lato', sans-serif;
-    color: #aa6b69;
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-button {
-    font-family: 'Lato', sans-serif;
-    border: none;
-    padding: 15px 25px;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button.cardapio {
-    background: #0a7cff;
-    color: #fff;
-}
-
-button.cardapio:hover {
-    background: #0663cc;
-}
-
-button.whatsapp {
-    background: #25D366;
-    color: #fff;
-}
-
-button.whatsapp:hover {
-    background-color: #1ebe5d;
-}
-
-
-@media (max-width: 800px) {
-    .foto-texto {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .foto-texto .texto h1 {
-        font-size: 20px;
-    }
-}
-</style>
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="logo2.png" alt="Lulu Doces" class="footer-logo">
+  <p>© Desde 2020 · Feito com amor ♥</p>
+  <div class="footer-links">
+    <a href="pagcardapio.html" target="_blank">Cardápio</a>
+    <a href="https://wa.me/5581984162280" target="_blank">WhatsApp</a>
+  </div>
+</footer>
 
 </body>
 </html>
